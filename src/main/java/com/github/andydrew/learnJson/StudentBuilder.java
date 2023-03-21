@@ -1,4 +1,4 @@
-package com.github.andydrew.learn;
+package com.github.andydrew.learnJson;
 
 public class StudentBuilder {
     private String school;

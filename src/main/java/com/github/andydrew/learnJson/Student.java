@@ -1,4 +1,4 @@
-package com.github.andydrew.learn;
+package com.github.andydrew.learnJson;
 
 import com.alibaba.fastjson.JSON;
 
