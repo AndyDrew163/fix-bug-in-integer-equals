@@ -4,6 +4,8 @@ public abstract class Person {//抽象类中抽象方法可有可无。
     private String name;
     private int age;
 
+    private String userName = "andydrew";
+
     public Person() {
     }
 
