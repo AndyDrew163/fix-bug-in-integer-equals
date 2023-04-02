@@ -1,7 +1,5 @@
 package com.github.andydrew.learnAbstract;
 
-import com.github.andydrew.learnAbstract.Person;
-
 public class Teachers extends Person {
     public Teachers() {
     }

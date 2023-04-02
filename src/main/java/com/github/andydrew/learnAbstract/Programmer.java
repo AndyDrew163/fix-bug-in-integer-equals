@@ -1,6 +1,7 @@
 package com.github.andydrew.learnAbstract;
 
 public class Programmer extends Person {
+
     public Programmer() {
     }
 
