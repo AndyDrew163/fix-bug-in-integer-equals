@@ -2,16 +2,19 @@ package com.github.andydrew.learnAlgorithm;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = {23, 232, 66, 33, 67, 28, 123, 24, 65, 43, 445, 778, 3333, 999};
+        long x = System.currentTimeMillis();
+        int[] arr = {23, 66, 67, 555, 61, 28, 123, 24, 65, 43, 445, 778, 3333, 999};
         BubbleSort bs = new BubbleSort();
         bs.bubbleSort(arr);
         for (int i = 0; i < arr.length; i++) {
             if (i != arr.length - 1) {
                 System.out.print(arr[i] + ",");
             } else {
-                System.out.print(arr[i]);
+                System.out.println(arr[i]);
             }
         }
+        x = System.currentTimeMillis() - x;
+        System.out.println("运行时间" + x + "毫秒");
     }
 
     public int[] bubbleSort(int[] arr) {
