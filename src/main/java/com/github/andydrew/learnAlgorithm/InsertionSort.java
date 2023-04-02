@@ -1,9 +1,15 @@
 package com.github.andydrew.learnAlgorithm;
 
+import java.util.Random;
+
 public class InsertionSort {
     public static void main(String[] args) {
         long x = System.currentTimeMillis();
-        int[] arr = {23, 66, 67, 555, 61, 28, 123, 24, 65, 43, 445, 778, 3333, 999};
+        int[] arr = new int[10];
+        Random random = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(200);
+        }
         InsertionSort is = new InsertionSort();
         is.insertionSort(arr);
         for (int i = 0; i < arr.length; i++) {

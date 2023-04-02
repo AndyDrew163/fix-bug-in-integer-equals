@@ -2,7 +2,7 @@ package com.github.andydrew.learnAlgorithm;
 
 import java.util.Random;
 
-public class BubbleSort {
+public class SelectionSort {
     public static void main(String[] args) {
         long x = System.currentTimeMillis();
         int[] arr = new int[10];
@@ -10,8 +10,7 @@ public class BubbleSort {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(200);
         }
-        BubbleSort bs = new BubbleSort();
-        bs.bubbleSort(arr);
+        selectionSort(arr);
         for (int i = 0; i < arr.length; i++) {
             if (i != arr.length - 1) {
                 System.out.print(arr[i] + ",");
@@ -23,15 +22,13 @@ public class BubbleSort {
         System.out.println("运行时间" + x + "毫秒");
     }
 
-    public int[] bubbleSort(int[] arr) {
-        int count = 0;//int[] arr = {23, 232, 66, 33, 67};如n=5
-        for (int i = 0; i < arr.length - 1; i++) {//冒泡排序外循环，循环次数为数组元素个数n-1=4
-            count = arr.length - i - 1;
-            for (int j = 0; j < count; j++) {//冒泡排序内循环，循环次数为逐次n-i
-                if (arr[j] > arr[j + 1]) {//若前一个元素大于后一个元素
-                    int a = arr[j];//a等于前一个元素
-                    int b = arr[j + 1];//b等于后一个元素
-                    arr[j] = b;//位置互动调
+    public static int[] selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length - 1; j++) {//依次选择最小元素调换到最前面
+                if (arr[i] > arr[j + 1]) {//第i个元素与后面的元素依次比较，若第i个元素大于后面的元素，则互换位置
+                    int a = arr[i];//互换位置
+                    int b = arr[j + 1];
+                    arr[i] = b;
                     arr[j + 1] = a;
                 }
             }
