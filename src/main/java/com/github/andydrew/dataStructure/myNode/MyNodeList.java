@@ -77,11 +77,42 @@ public class MyNodeList<E> {//该对象永远只记录首结点和末结点地�
             result[i++] = x.item;
         return result;
     }
+
     public Object[] toArrayMyNode() {
         Object[] result = new Object[size];
         int i = 0;
         for (MyNode<E> x = firstMyNode; x != null; x = x.next)//循环遍历链表中的数据
             result[i++] = x.e;
         return result;
+    }
+
+    public Itr getItr() {
+        return new Itr();
+    }
+
+    public class Itr {
+        int size;
+        String name;
+        int age;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+
+        public void printSize() {
+            System.out.println(name + "，今年" + age + "岁。" + "实际是" + size);
+        }
     }
 }
